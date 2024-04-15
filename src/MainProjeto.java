@@ -1,6 +1,6 @@
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+//import java.time.LocalDate;
+//import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -223,7 +223,7 @@ public class MainProjeto {
      * @throws InterruptedException
      * @throws IOException
      */
-    public static void menuUsuario(Usuario usuario, Scanner sc) throws InterruptedException, IOException {
+    /*public static void menuUsuario(Usuario usuario, Scanner sc) throws InterruptedException, IOException {
         boolean sair = false;
         int idLivro;
         do {
@@ -322,7 +322,7 @@ public class MainProjeto {
             } catch (NumberFormatException e) {
             }
         } while (!sair);
-    }
+    }*/
 
     /**
      * O menu do Administrador, que dispõe de opções para vizualizar e editar seu
