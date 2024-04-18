@@ -22,6 +22,9 @@ public class MainProjeto {
                     case 2:
                         BuscarLivro(sc);
                         break;
+                    case 3:
+                        ListarLivros(sc);
+                        break;
                     case 0: // Sair
                         sair = true;
                         System.out.println("\n     - Finalizando -\n");
@@ -41,6 +44,7 @@ public class MainProjeto {
         System.out.println(" 1 -> Login");
         //System.out.println(" 2 -> Registrar-se");
         System.out.println(" 2 -> Buscar Livro");
+        System.out.println(" 3 -> Listar Livros");
         System.out.println(" 0 -> Sair");
         System.out.print(" >> ");
         return sc.nextLine();
@@ -81,7 +85,19 @@ public class MainProjeto {
         }
     }
 
-    
+     public static void ListarLivros(Scanner sc) throws InterruptedException, IOException {
+        System.out.println(" < Listando Acervo >");
+        ArrayList<Livro> ListaLivro = Livro.listarLivros();
+        if (ListaLivro != null && ListaLivro.size() > 0) {
+            for (int i = 0; i < ListaLivro.size(); i++) {
+                System.out.println(ListaLivro.get(i).toString() + "\n");
+            }
+        } else
+            System.out.println("\n Nenhum livro encontrado! ");
+        System.out.print("\n Aperte Enter para Continuar! ");
+        sc.nextLine();
+        
+    }
     
     public static void MenuLogin(Scanner sc) throws InterruptedException, IOException {
         int out = 3;
